@@ -299,6 +299,17 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .journal-sidebar.is-collapsed .sidebar-brand .brand-mark { display: grid; }
 .journal-sidebar.is-collapsed .sidebar-brand { padding: 18px 14px; justify-content: center; }
 
+/* Research News keeps scholarly evidence visually distinct from wider learning media. */
+.news-filter-group { display: grid; align-self: start; gap: 7px; }
+.news-filter-group > span { color: var(--journal-muted); font-family: var(--serif); font-size: 10px; letter-spacing: .03em; }
+.news-filter-group .news-filters { grid-column: auto; }
+.news-kind { display: inline-flex; align-items: center; gap: 5px; padding: 4px 8px; border: 1px solid rgba(73,93,91,.14); border-radius: 999px; background: rgba(255,255,255,.34); color: #536a67; text-transform: uppercase; letter-spacing: .06em; }
+.news-kind.book { color: #6f6278; background: rgba(142,132,159,.07); }
+.news-kind.podcast { color: #756160; background: rgba(168,121,120,.065); }
+.news-kind.other-media { color: #526d70; background: rgba(111,151,147,.07); }
+.news-media-note { max-width: 590px; margin: 12px 0 0; padding: 8px 11px; border-left: 2px solid rgba(142,132,159,.32); color: var(--journal-muted); background: rgba(142,132,159,.045); font-size: 9px; line-height: 1.5; }
+@media(max-width:680px){.news-filter-group{grid-column:auto}.news-meta{gap:6px}.news-kind,.news-directness{font-size:8px}}
+
 :root{--theme-text:#294146;--theme-muted:#667678}
 /* The journal keeps the paper wash independent from the small accent marks. */
 .journal-app{--journal-ink:var(--theme-text);--journal-muted:var(--theme-muted);--journal-paper:#f4f7f8;--journal-paper-deep:#e7eef0;position:relative;overflow:hidden;background:var(--journal-paper)!important;background-image:radial-gradient(circle at 17% 18%,rgba(255,255,255,.4),transparent 32%),linear-gradient(135deg,rgba(255,255,255,.13),transparent 48%),radial-gradient(rgba(58,71,67,.055) .55px,transparent .7px)!important;background-size:auto,auto,5px 5px}.journal-app:before{opacity:.09!important;background-position:right 3rem top 4rem!important;z-index:0}.journal-app.illustration-botanical:before{background-image:url('./botanical-sprig.svg')!important;background-size:260px auto!important}.journal-app.illustration-anatomical:before,.journal-app.illustration-mixed:before{background-image:url('./heart-botanical.svg')!important;background-size:290px auto!important}.journal-app.illustration-soft:before{opacity:.14!important}.journal-app.illustration-minimal:before{opacity:0!important}.journal-main,.journal-sidebar{position:relative;z-index:1}.journal-sidebar{background:rgba(239,241,235,.54)!important;backdrop-filter:blur(14px)}.journal-topbar{background:rgba(246,244,238,.63)!important;backdrop-filter:blur(14px)}

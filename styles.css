@@ -300,3 +300,81 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .paper-theme-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px}.paper-theme-choice{display:flex;align-items:center;gap:9px;min-width:0;padding:8px;border:1px solid transparent;border-radius:9px;cursor:pointer}.paper-theme-choice:hover,.paper-theme-choice:has(input:checked){border-color:color-mix(in srgb,var(--color-primary) 45%,var(--journal-rule));background:color-mix(in srgb,var(--color-primary) 7%,transparent)}.paper-theme-choice input,.illustration-choice input{position:absolute;opacity:0}.paper-swatch{width:29px;height:29px;flex:0 0 29px;border:1px solid rgba(50,65,64,.2);border-radius:8px;background-color:#f2ecdf;background-image:radial-gradient(rgba(54,68,67,.12) .55px,transparent .75px),linear-gradient(135deg,rgba(255,255,255,.6),transparent)}.paper-ivory .paper-swatch{background-color:#f6f3ea}.paper-soft-sage .paper-swatch{background-color:#e8eee7}.paper-blush-mist .paper-swatch{background-color:#f3e8e5}.paper-lavender-haze .paper-swatch{background-color:#edeaf2}.paper-muted-teal-mist .paper-swatch{background-color:#e5efed}.paper-soft-beige .paper-swatch{background-color:#eee7d8}.paper-warm-grey .paper-swatch{background-color:#e9e9e4}.paper-theme-copy{display:grid;gap:2px;min-width:0}.paper-theme-copy strong{overflow:hidden;color:var(--journal-ink);font-family:var(--sans);font-size:10px;font-weight:600;text-overflow:ellipsis;white-space:nowrap}.paper-theme-copy small{overflow:hidden;color:var(--journal-muted);font-size:9px;line-height:1.25;text-overflow:ellipsis;white-space:nowrap}.illustration-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:10px}.illustration-choice{padding:9px;border:1px solid var(--journal-rule);border-radius:9px;cursor:pointer}.illustration-choice:has(input:checked){border-color:color-mix(in srgb,var(--color-primary) 55%,var(--journal-rule));background:color-mix(in srgb,var(--color-primary) 8%,transparent)}.illustration-choice span{display:grid;gap:3px}.illustration-choice strong{font-family:var(--sans);font-size:10px;font-weight:600}.illustration-choice small{color:var(--journal-muted);font-size:9px}.intensity-select{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;color:var(--journal-muted);font-size:10px}.intensity-select select{padding:6px 8px;border:1px solid var(--journal-rule);border-radius:7px;color:var(--journal-ink);background:color-mix(in srgb,var(--journal-paper) 68%,transparent);font-size:10px}
 .today-layout{position:relative}.today-illustration{position:absolute;top:18px;right:0;width:205px;z-index:0;pointer-events:none;opacity:.16}.today-illustration img{display:block;width:100%;height:auto;filter:saturate(.72)}.today-layout.illustration-soft .today-illustration{opacity:.24}.today-layout.illustration-botanical .today-illustration{width:175px}.today-layout.illustration-anatomical .today-illustration{width:205px}.today-layout.illustration-minimal .today-illustration{display:none}.today-layout .page-heading,.today-layout .today-spread{position:relative;z-index:1}.today-layout .page-heading{padding-right:195px}.today-layout .page-heading p{max-width:590px}
 @media(max-width:680px){.paper-theme-options,.illustration-options{grid-template-columns:1fr}.today-layout .page-heading{padding-right:0}.today-illustration{top:92px;right:0;width:92px!important;opacity:.1}.today-layout.illustration-soft .today-illustration{opacity:.15}.today-spread{position:relative}.journal-app .paper-sheet,.journal-app .settings-card{box-shadow:0 10px 24px color-mix(in srgb,var(--journal-ink) 8%,transparent)!important}}
+
+/* Research Companion keeps the journal's paper feel: quiet cards, no dashboards. */
+.coaching-wrap { max-width: 1120px; }
+.coaching-gate { display:flex; align-items:flex-start; gap:14px; max-width:1030px; margin:0 auto 18px; padding:17px 20px; border-radius:10px; background:rgba(238,242,235,.9); }
+.coaching-gate-icon { color:var(--color-warning); flex:0 0 auto; }
+.coaching-gate strong { display:block; color:#29434a; font-family:var(--serif); font-size:15px; }
+.coaching-gate p { margin:5px 0 0; color:var(--journal-muted); font-size:12px; line-height:1.6; }
+.coaching-gate.hard-stop { border:1px solid rgba(170,113,100,.38); background:rgba(249,237,231,.82); }
+.coaching-gate.proposal { border:1px solid rgba(142,132,159,.34); background:rgba(241,237,247,.8); }
+.coaching-gate.cleared { border:1px solid rgba(111,151,147,.4); background:rgba(232,244,237,.84); }
+.coaching-route-card, .coaching-message, .coaching-milestones, .looking-ahead, .mentor-writing, .future-writing, .future-note { max-width:1030px; margin:0 auto 18px; }
+.coaching-route-card { padding:25px 31px; }
+.coaching-card-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:14px; margin-bottom:12px; }
+.coaching-card-heading h2, .coaching-route-card h2, .coaching-phase-intro h2, .coaching-grid h2, .future-group h2 { margin:2px 0 0; color:#29434a; font-family:var(--serif); font-size:21px; font-weight:400; }
+.coaching-card-heading span, .coaching-label, .coaching-card-heading > span { color:var(--journal-muted); font-size:10px; }
+.coaching-muted { color:var(--journal-muted); font-size:11px; line-height:1.6; }
+.coaching-select-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.coaching-select-grid select, .deadline-row input { width:100%; padding:9px 10px; border:1px solid var(--journal-rule); border-radius:7px; color:var(--journal-ink); background:rgba(255,255,255,.3); }
+.deadline-row { display:grid; grid-template-columns:minmax(190px,260px) 1fr; align-items:end; gap:22px; }
+.deadline-row p { margin:0 0 14px; color:var(--journal-muted); font-size:10px; line-height:1.55; }
+.deadline-row p strong { color:var(--journal-ink); }
+.coaching-phase-intro { display:flex; align-items:end; justify-content:space-between; max-width:1030px; margin:30px auto 18px; gap:20px; }
+.coaching-phase-intro p { max-width:700px; margin:9px 0 0; color:var(--journal-muted); font-size:13px; line-height:1.65; }
+.phase-date, .mentor-week-label em { color:var(--journal-muted); font-family:var(--serif); font-size:11px; font-style:italic; white-space:nowrap; }
+.coaching-message { padding:29px 32px; }
+.coaching-quote { max-width:850px; color:#29434a; font-family:var(--serif); font-size:18px; line-height:1.6; }
+.coaching-columns { display:grid; grid-template-columns:1.1fr 1fr; gap:32px; margin-top:24px; }
+.coaching-columns h3, .coaching-grid h3 { margin:0 0 8px; color:#50726e; font-family:var(--serif); font-size:15px; font-weight:400; }
+.coaching-columns p, .coaching-grid p { margin:0; color:var(--journal-muted); font-size:12px; line-height:1.65; }
+.coaching-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); max-width:1030px; margin:0 auto 18px; gap:16px; }
+.coaching-grid > .paper-sheet { padding:24px 25px; }
+.coaching-list { display:grid; gap:10px; margin:12px 0 0; padding:0; list-style:none; }
+.coaching-list li { position:relative; padding-left:16px; color:var(--journal-muted); font-size:11px; line-height:1.55; }
+.coaching-list li::before { position:absolute; left:0; top:.58em; width:5px; height:5px; border-radius:50%; content:''; background:var(--color-secondary); }
+.prompt-list li::before { border-radius:0 5px 5px 5px; transform:rotate(45deg); }
+.looking-ahead { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:23px 29px; }
+.looking-ahead p { max-width:700px; margin:8px 0 0; color:var(--journal-muted); font-size:11px; line-height:1.6; }
+.coaching-milestones { padding:25px 30px; }
+.milestone-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 20px; }
+.coaching-milestone, .future-checklist label, .future-actions label { display:flex; align-items:flex-start; gap:9px; padding:9px 0; color:var(--journal-muted); font-size:11px; line-height:1.5; }
+.coaching-milestone button, .future-checklist button, .future-actions button { display:grid; place-items:center; flex:0 0 auto; width:22px; height:22px; padding:0; border:1px solid var(--journal-rule); border-radius:50%; color:var(--journal-muted); background:transparent; }
+.coaching-milestone.done strong, .future-checklist label.done span, .future-actions label.done span { text-decoration:line-through; opacity:.58; }
+.coaching-milestone span { display:grid; gap:2px; }
+.coaching-milestone strong { color:var(--journal-ink); font-family:var(--serif); font-size:12px; font-weight:400; }
+.coaching-milestone small { color:var(--journal-muted); font-size:10px; }
+.coaching-milestone em { color:var(--color-primary); font-size:9px; font-style:normal; }
+.handbook-details { max-width:1030px; margin:0 auto 20px; padding:16px 22px; border:1px solid var(--journal-rule); border-radius:10px; color:var(--journal-muted); background:rgba(246,244,236,.75); }
+.handbook-details summary { cursor:pointer; color:#3e615e; font-family:var(--serif); font-size:14px; }
+.handbook-details section { margin:18px 0; padding-top:14px; border-top:1px solid var(--journal-rule); }
+.handbook-details h3 { margin:0 0 4px; color:var(--journal-ink); font-family:var(--serif); font-size:14px; font-weight:400; }
+.handbook-details ul { display:grid; gap:6px; padding-left:18px; font-size:11px; line-height:1.5; }
+.reference-note, .reference-source { color:var(--journal-muted); font-size:10px; line-height:1.5; }
+.reference-source { display:flex; align-items:center; gap:5px; }
+.mentor-pager { display:flex; align-items:center; gap:5px; color:var(--journal-muted); font-size:11px; }
+.mentor-week-label { display:flex; align-items:center; justify-content:flex-start; gap:14px; max-width:1030px; margin:0 auto 15px; color:var(--journal-muted); font-family:var(--serif); font-size:12px; }
+.mentor-week-label strong { color:var(--journal-ink); font-size:14px; font-weight:400; }
+.mentor-grid > .paper-sheet { min-height:360px; }
+.mentor-grid h2 { margin-bottom:15px; }
+.mentor-grid h3 { margin-top:25px; }
+.mentor-question { color:var(--journal-ink)!important; font-family:var(--serif); font-size:15px!important; }
+.future-actions { display:grid; gap:3px; margin-top:8px; }
+.future-actions label { margin:0; }
+.mentor-writing { padding:27px 31px; }
+.future-note { padding:17px 23px; border-left:3px solid var(--color-secondary); }
+.future-note p { margin:0; color:var(--journal-muted); font-size:11px; line-height:1.6; }
+.future-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); max-width:1030px; margin:0 auto 18px; gap:16px; }
+.future-group { padding:24px 25px; }
+.future-group.project-only { border-color:rgba(170,113,100,.3); }
+.future-checklist { display:grid; gap:1px; margin-top:8px; }
+.future-checklist label { border-bottom:1px solid var(--journal-rule); }
+.future-writing { padding:25px 31px; }
+.future-writing .journal-field .field-label { display:none; }
+.companion-today-card { padding:17px 16px; border:1px solid rgba(111,151,147,.34); border-radius:12px; background:rgba(232,243,237,.9); box-shadow:0 8px 22px rgba(54,74,73,.06); }
+.companion-today-card strong { display:block; margin:8px 0 6px; color:#304950; font-family:var(--serif); font-size:14px; font-weight:400; line-height:1.35; }
+.companion-today-card p, .companion-today-card small { display:block; margin:0 0 7px; color:var(--journal-muted); font-size:10px; line-height:1.5; }
+.companion-today-card .text-button { margin-top:6px; font-size:10px; }
+@media(max-width:900px){.coaching-grid{grid-template-columns:1fr 1fr}.coaching-grid > .paper-sheet:last-child{grid-column:1/-1}.future-groups{grid-template-columns:1fr}.milestone-list{grid-template-columns:1fr}}
+@media(max-width:680px){.coaching-route-card,.coaching-message,.coaching-milestones,.mentor-writing,.future-writing{padding:21px 20px}.coaching-select-grid,.coaching-columns,.deadline-row{grid-template-columns:1fr;gap:4px}.deadline-row p{margin:0 0 10px}.coaching-phase-intro,.looking-ahead,.mentor-week-label{align-items:flex-start;flex-direction:column;gap:8px}.coaching-grid{grid-template-columns:1fr}.coaching-grid > .paper-sheet:last-child{grid-column:auto}.future-group{padding:21px 20px}.coaching-card-heading{gap:8px}.coaching-card-heading h2{font-size:18px}.coaching-quote{font-size:16px}.phase-date{white-space:normal}}

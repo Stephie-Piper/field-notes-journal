@@ -438,4 +438,13 @@ body{background:#f2f4f4;color:var(--journal-ink)}
 .palette-choice span{box-shadow:0 0 0 1px rgba(54,78,84,.2)!important}
 .mobile-select{background:rgba(248,251,252,.82)!important}
 .paper-swatch,.paper-warm-cream .paper-swatch,.paper-ivory .paper-swatch{background:#f8f9f9!important}.paper-soft-sage .paper-swatch{background:#f3f7f5!important}.paper-blush-mist .paper-swatch{background:#f8f5f7!important}.paper-lavender-haze .paper-swatch{background:#f6f5f9!important}.paper-muted-teal-mist .paper-swatch{background:#f2f7f7!important}.paper-soft-beige .paper-swatch,.paper-warm-grey .paper-swatch{background:#f5f7f7!important}
+/* One illustration only: retire the old full-page botanical/heart layer. */
+.journal-app::before,.journal-app.illustration-anatomical::before,.journal-app.illustration-mixed::before,.journal-app.illustration-botanical::before{content:none!important;display:none!important;background-image:none!important;opacity:0!important}
+/* Selection and interaction washes blend into the paper rather than forming solid blocks. */
+.journal-app,.journal-app *{-webkit-tap-highlight-color:rgba(100,143,144,.035)}
+.journal-app *::selection{color:inherit!important;background:rgba(100,143,144,.055)!important}
+.journal-app *::-moz-selection{color:inherit!important;background:rgba(100,143,144,.055)!important}
+.journal-app :where(.nav-copy strong,.nav-copy small,.field-label,.eyebrow,.page-date,.rail-kicker,.task-count,.sync-state span,.coaching-label,.phase-date,.reference-source,.settings-help){background-color:transparent!important;box-shadow:none!important}
+.journal-app :where(.nav-item.selected,.settings-nav-button.selected,.palette-choice:has(input:checked),.paper-theme-choice:has(input:checked),.illustration-choice:has(input:checked)){background:color-mix(in srgb,var(--color-primary) 3%,transparent)!important}
+.journal-app :where(.task-status,.companion-today-card,.notice,.privacy-note){background:color-mix(in srgb,var(--color-primary) 2.5%,transparent)!important}
 @media(max-width:680px){.page-heading-copy{max-width:calc(100% - 78px)}.page-heading-illustration{top:0;width:88px;height:82px;opacity:.16}.page-heading{min-height:84px}.paper-sheet{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(78,108,112,.07) 31px)!important}}

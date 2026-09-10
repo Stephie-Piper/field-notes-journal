@@ -412,13 +412,12 @@ body{background:#f2f4f4;color:var(--journal-ink)}
 .paper-sheet::after{background-image:radial-gradient(circle at 50% 50%,rgba(67,91,95,.34) 0 2.5px,rgba(244,248,249,.8) 2.7px 5px,transparent 5.2px)!important}
 .page-heading{position:relative}
 .page-heading-copy{position:relative;z-index:1;max-width:calc(100% - 125px)}
-.page-heading-illustration{position:absolute;right:0;top:-12px;width:142px;height:124px;color:#648f90;opacity:.23;pointer-events:none;z-index:0}
-.page-illustration svg{display:block;width:100%;height:100%}
-.page-illustration .botanical-line{display:none;stroke:#a08799}
-.journal-app.illustration-botanical .page-illustration .anatomical-line{display:none}
-.journal-app.illustration-botanical .page-illustration .botanical-line{display:block}
-.journal-app.illustration-minimal .page-illustration{display:none}
-.journal-app.illustration-soft .page-illustration{opacity:.3}
+.page-heading-illustration{position:absolute;right:-8px;top:-42px;width:210px;height:178px;pointer-events:none;z-index:0;overflow:hidden;mix-blend-mode:multiply;opacity:.82;mask-image:radial-gradient(ellipse at center,#000 48%,transparent 82%);-webkit-mask-image:radial-gradient(ellipse at center,#000 48%,transparent 82%)}
+.page-illustration img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-select:none}
+.journal-app.illustration-subtle .page-illustration{opacity:.68}.journal-app.illustration-soft .page-illustration{opacity:.9}.journal-app.illustration-botanical .page-illustration{opacity:.58}.journal-app.illustration-minimal .page-illustration{display:none}
+.journal-floral-border{position:fixed;z-index:1;top:58px;bottom:0;left:270px;width:108px;height:calc(100vh - 58px);object-fit:cover;object-position:left center;mix-blend-mode:multiply;pointer-events:none;user-select:none;-webkit-user-select:none;opacity:.72;mask-image:linear-gradient(to bottom,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 7%,#000 93%,transparent);transition:left .2s ease}
+.journal-sidebar.is-collapsed~.journal-floral-border{left:63px}.journal-app.illustration-minimal .journal-floral-border{display:none}
+.journal-scroll{position:relative;padding-left:clamp(70px,7vw,104px)}
 .page-heading h1{color:#29434a!important}
 .page-heading p,.field-label,.settings-label,.coaching-muted,.coaching-columns p,.coaching-grid p{color:#63777c!important}
 .auth-shell{background:#f4f7f8!important;background-image:linear-gradient(145deg,rgba(207,226,228,.28),transparent 48%)!important}
@@ -454,4 +453,4 @@ body{background:#f2f4f4;color:var(--journal-ink)}
 .journal-app :where(.nav-copy strong,.nav-copy small,.field-label,.eyebrow,.page-date,.rail-kicker,.task-count,.sync-state span,.coaching-label,.phase-date,.reference-source,.settings-help){background-color:transparent!important;box-shadow:none!important}
 .journal-app :where(.nav-item.selected,.settings-nav-button.selected,.palette-choice:has(input:checked),.paper-theme-choice:has(input:checked),.illustration-choice:has(input:checked)){background:color-mix(in srgb,var(--color-primary) 3%,transparent)!important}
 .journal-app :where(.task-status,.companion-today-card,.notice,.privacy-note){background:color-mix(in srgb,var(--color-primary) 2.5%,transparent)!important}
-@media(max-width:680px){.page-heading-copy{max-width:calc(100% - 78px)}.page-heading-illustration{top:0;width:88px;height:82px;opacity:.16}.page-heading{min-height:84px}.paper-sheet{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(78,108,112,.07) 31px)!important}}
+@media(max-width:680px){.journal-scroll{padding-left:30px}.journal-floral-border{left:0;top:62px;width:48px;height:calc(100vh - 62px);opacity:.42}.page-heading-copy{max-width:calc(100% - 92px)}.page-heading-illustration{top:-8px;right:-5px;width:108px;height:96px;opacity:.72}.page-heading{min-height:92px}.paper-sheet{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 30px,rgba(78,108,112,.07) 31px)!important}}

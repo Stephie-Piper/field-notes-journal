@@ -441,9 +441,16 @@ body{background:#f2f4f4;color:var(--journal-ink)}
 /* One illustration only: retire the old full-page botanical/heart layer. */
 .journal-app::before,.journal-app.illustration-anatomical::before,.journal-app.illustration-mixed::before,.journal-app.illustration-botanical::before{content:none!important;display:none!important;background-image:none!important;opacity:0!important}
 /* Selection and interaction washes blend into the paper rather than forming solid blocks. */
-.journal-app,.journal-app *{-webkit-tap-highlight-color:rgba(100,143,144,.035)}
-.journal-app *::selection{color:inherit!important;background:rgba(100,143,144,.055)!important}
-.journal-app *::-moz-selection{color:inherit!important;background:rgba(100,143,144,.055)!important}
+.journal-app,.journal-app *{-webkit-tap-highlight-color:rgba(100,143,144,.025)}
+/* Safari can retain a system selection across a PWA view and render it as solid
+   blocks. Interface copy is therefore non-selectable; the user's writing and
+   editable controls remain normally selectable. */
+.journal-app{user-select:none;-webkit-user-select:none}
+.journal-app :where(input,textarea,select,[contenteditable="true"],.paper-input){user-select:text;-webkit-user-select:text}
+.journal-app *::selection{color:inherit!important;background:transparent!important}
+.journal-app *::-moz-selection{color:inherit!important;background:transparent!important}
+.journal-app :where(input,textarea,.paper-input)::selection{color:inherit!important;background:rgba(100,143,144,.09)!important}
+.journal-app :where(input,textarea,.paper-input)::-moz-selection{color:inherit!important;background:rgba(100,143,144,.09)!important}
 .journal-app :where(.nav-copy strong,.nav-copy small,.field-label,.eyebrow,.page-date,.rail-kicker,.task-count,.sync-state span,.coaching-label,.phase-date,.reference-source,.settings-help){background-color:transparent!important;box-shadow:none!important}
 .journal-app :where(.nav-item.selected,.settings-nav-button.selected,.palette-choice:has(input:checked),.paper-theme-choice:has(input:checked),.illustration-choice:has(input:checked)){background:color-mix(in srgb,var(--color-primary) 3%,transparent)!important}
 .journal-app :where(.task-status,.companion-today-card,.notice,.privacy-note){background:color-mix(in srgb,var(--color-primary) 2.5%,transparent)!important}

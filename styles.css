@@ -256,6 +256,17 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .custom-page-editor .settings-label { margin: 0; }
 .empty-settings { padding: 19px; border: 1px dashed var(--journal-rule); border-radius: 9px; color: var(--journal-muted); font-family: var(--serif); font-size: 12px; text-align: center; }
 .calendar-settings-card h2 { display: flex; align-items: center; gap: 8px; }
+.google-calendar-connect,.google-calendar-connected{display:flex;align-items:center;gap:15px;margin:16px 0;padding:18px;border:1px solid rgba(82,105,98,.17);border-radius:14px;background:rgba(245,248,247,.58)}
+.google-calendar-connect>svg{flex:0 0 auto;color:var(--color-primary)}
+.google-calendar-connect>div,.calendar-connected-copy>div{display:grid;gap:4px;min-width:0;flex:1}
+.google-calendar-connect strong,.calendar-connected-copy strong{color:var(--journal-ink);font-family:var(--serif);font-size:13px;font-weight:500}
+.google-calendar-connect span,.calendar-connected-copy span{color:var(--journal-muted);font-size:10px;line-height:1.45}
+.google-connect-button{flex:0 0 auto;padding:10px 15px;font-size:11px}
+.google-calendar-connected{justify-content:space-between}
+.calendar-connected-copy{display:flex;align-items:center;gap:11px;min-width:0}
+.calendar-connected-icon{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:50%;color:var(--color-primary);background:rgba(255,255,255,.62);border:1px solid rgba(82,105,98,.18)}
+.calendar-disconnect{display:inline-flex;align-items:center;gap:5px}
+@media(max-width:680px){.google-calendar-connect,.google-calendar-connected{align-items:flex-start;flex-direction:column}.google-connect-button{width:100%}.google-calendar-connected .calendar-actions{width:100%}}
 .calendar-steps { display: grid; gap: 8px; margin: 8px 0 17px; padding-left: 20px; color: var(--journal-muted); font-size: 11px; line-height: 1.55; }
 .calendar-steps a { display: inline-flex; align-items: center; gap: 4px; color: var(--journal-ink); text-decoration: underline; }
 .calendar-warning { max-width: none; margin: 13px 0 15px; }

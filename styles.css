@@ -124,6 +124,22 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .empty-scrap { min-height: 280px; display: grid; place-content: center; gap: 8px; border: 1px dashed color-mix(in srgb, var(--journal-ink) 24%, transparent); border-radius: 8px; color: var(--journal-muted); background: transparent; font-family: var(--serif); font-size: 12px; }
 .empty-scrap:hover { color: var(--journal-ink); background: color-mix(in srgb, var(--journal-ink) 4%, transparent); }
 
+.weekly-collected { margin: 1rem 0 2rem; padding: 1rem; border: 1px solid color-mix(in srgb, var(--color-primary) 16%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--journal-paper) 96%, var(--color-primary) 4%); }
+.weekly-collected-heading { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .8rem; }
+.weekly-collected-heading .field-label { display: flex; align-items: center; gap: .4rem; }
+.weekly-collected-heading p, .weekly-whole-heading p { margin: .3rem 0 0; color: var(--journal-muted); font-size: .86rem; }
+.weekly-days { display: grid; gap: .65rem; }
+.weekly-day { padding: .8rem .9rem; border-radius: 13px; background: color-mix(in srgb, var(--journal-paper) 98%, var(--journal-ink) 2%); border-left: 2px solid color-mix(in srgb, var(--journal-ink) 10%, transparent); }
+.weekly-day.has-writing { border-left-color: color-mix(in srgb, var(--color-primary) 42%, transparent); }
+.weekly-day-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.weekly-day-heading strong { font-size: .91rem; }
+.weekly-day-copy { margin-top: .6rem; display: grid; gap: .45rem; }
+.weekly-day-copy p { margin: 0; white-space: pre-wrap; color: var(--journal-ink); line-height: 1.55; font-size: .88rem; }
+.weekly-day-copy b { font-weight: 650; }
+.weekly-day-empty { margin: .45rem 0 0; color: var(--journal-muted); font-size: .84rem; font-style: italic; }
+.weekly-whole-heading { margin: 2rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid color-mix(in srgb, var(--journal-ink) 9%, transparent); }
+.weekly-whole-heading span { font-family: var(--serif); font-size: 1.2rem; }
+
 @media (max-width: 900px) {
   .journal-sidebar { width: 245px; flex-basis: 245px; }
   .journal-sidebar.is-collapsed { width: 68px; flex-basis: 68px; }

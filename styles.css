@@ -422,11 +422,11 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
   --journal-paper:#f7f8f8;--journal-ink:#30464b;--journal-rule:rgba(54,78,84,.14);--journal-muted:#647579;
   --color-primary:#648f90;--color-secondary:#8d879b;--color-warning:#897783;--color-base-100:#f7f8f8;--color-base-content:#30464b;--color-primary-content:#f8fbfb;
 }
-html,body,#root{background:#f2f4f4;color:var(--journal-ink)}
-body{background:#f2f4f4;color:var(--journal-ink)}
+html,body,#root{background:#b8c8be;color:var(--journal-ink)}
+body{background:#b8c8be;color:var(--journal-ink)}
 ::selection{color:inherit;background:rgba(100,143,144,.11)}
 /* Legacy IDs remain valid for saved journals, but all resolve to very pale cool neutrals. */
-.journal-app{--journal-paper:#f7f8f8!important;--journal-paper-deep:#eaeeee!important;--journal-ink:#30464b!important;--journal-muted:#647579!important;--journal-rule:rgba(54,78,84,.14)!important;background:#f1f3f3!important;background-image:linear-gradient(135deg,rgba(207,220,222,.07),transparent 52%)!important}
+.journal-app{--journal-paper:#f7f8f8!important;--journal-paper-deep:#eaeeee!important;--journal-ink:#30464b!important;--journal-muted:#647579!important;--journal-rule:rgba(54,78,84,.14)!important;background:#b8c8be!important;background-image:radial-gradient(circle at 18% 16%,rgba(238,246,241,.22),transparent 34%),linear-gradient(135deg,rgba(91,119,105,.12),transparent 54%)!important}
 .journal-app.paper-warm-cream,.journal-app.paper-ivory{--journal-paper:#f8f9f9!important;--journal-paper-deep:#edf0f1!important}
 .journal-app.paper-soft-sage{--journal-paper:#f6f9f8!important;--journal-paper-deep:#eaf0ee!important}
 .journal-app.paper-blush-mist{--journal-paper:#f9f7f8!important;--journal-paper-deep:#f0ecee!important}
@@ -438,8 +438,8 @@ body{background:#f2f4f4;color:var(--journal-ink)}
 .palette-soft-clay span{background:#7d8794!important}.palette-moss span{background:#738a84!important}.palette-warm-graphite span{background:#65787d!important}
 .journal-app:before{opacity:.035!important;background-image:url('./botanical-sprig.svg')!important;background-position:right 4rem top 5rem!important;background-size:230px auto!important;mix-blend-mode:normal!important}
 .journal-app.illustration-minimal:before{display:none}
-.journal-sidebar{background:rgba(237,244,245,.72)!important;border-color:rgba(54,78,84,.14)!important;backdrop-filter:blur(14px)}
-.journal-topbar{background:rgba(244,248,249,.76)!important;border-color:rgba(54,78,84,.14)!important}
+.journal-sidebar{background:rgba(215,227,220,.76)!important;border-color:rgba(54,78,84,.18)!important;backdrop-filter:blur(14px)}
+.journal-topbar{background:rgba(226,235,230,.78)!important;border-color:rgba(54,78,84,.16)!important}
 .journal-main{background:transparent}
 .brand-mark{color:var(--color-primary)!important;background:transparent!important;border:1px solid rgba(100,143,144,.38)!important;box-shadow:none!important}
 .nav-item.selected{background:transparent!important;box-shadow:inset 2px 0 0 var(--color-primary)!important;color:var(--journal-ink)!important}

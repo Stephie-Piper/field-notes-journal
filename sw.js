@@ -1,5 +1,5 @@
-const CACHE='field-notes-v11';
-const CORE=['./','./index.html','./app.js?v=10','./styles.css?v=10','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png','./art/floral-border.webp','./art/today.webp','./art/research-companion.webp','./art/supervisor.webp','./art/literature.webp','./art/diary.webp','./art/brain-dump.webp','./art/weekly.webp','./art/weekly-mentor.webp','./art/advice.webp','./art/fieldwork.webp','./art/analysis.webp','./art/progress.webp','./art/future-steph.webp'];
+const CACHE='field-notes-v12';
+const CORE=['./','./index.html','./app.js?v=11','./styles.css?v=11','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png','./art/floral-border.webp','./art/today.webp','./art/research-companion.webp','./art/par6015.webp','./art/par6018.webp','./art/pharmacology.webp','./art/ambulance-reflections.webp','./art/supervisor.webp','./art/literature.webp','./art/diary.webp','./art/brain-dump.webp','./art/weekly.webp','./art/weekly-mentor.webp','./art/advice.webp','./art/fieldwork.webp','./art/analysis.webp','./art/progress.webp','./art/future-steph.webp'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
